@@ -1,0 +1,530 @@
+@import './blocks/nullstyle';
+
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Century Gothic Bold';
+  src: url('../fonts/centurygothic_bold.woff');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  src: url('../fonts/centurygothic.woff');
+}
+
+@font-face {
+  font-family: Mistral;
+  src: url('../fonts/mistralnormal.woff');
+}
+
+@font-face {
+  font-family: Johnstown;
+  src: url('../fonts/johnstowndemo.woff');
+}
+
+body {
+  font-family: 'Century Gothic';
+  background-color: #334B35;
+  color: #FFFFFF;
+}
+
+.container {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: clamp(80px, 7.48vw, 110px);
+
+  nav {
+    display: flex;
+    gap: clamp(20px, 3.4vw, 50px);
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 20px;
+  position: relative;
+
+  & span,
+  &::after,
+  &::before {
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    display: inline-block;
+  }
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  @media (max-width: 700px) {
+    display: flex;
+  }
+}
+
+.hero {
+  background-image: url('../images/img/hego-bg.jpg');
+  height: calc(100vh - clamp(80px, 7.48vw, 110px));
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__content {
+    max-width: 730px;
+    padding-top: clamp(40px, 12.24vw, 180px);
+
+    h1 {
+      font-family: 'Century Gothic Bold';
+      font-size: clamp(20px, 1.7vw, 25px);
+      width: fit-content;
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        aspect-ratio: 215/10;
+        background-image: url('../images/icons/hero-line.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    h2 {
+      font-family: 'Livvic';
+      font-size: clamp(40px, 4.76vw, 70px);
+      color: #F7C35F;
+      font-weight: bold;
+      width: fit-content;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 11.8%;
+        display: inline-block;
+        aspect-ratio: 75/62;
+        background-image: url('../images/icons/image\ 5.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -22%;
+        right: -6px;
+      }
+    }
+
+    h3 {
+      font-family: 'Livvic';
+      font-size: clamp(40px, 4.76vw, 70px);
+      font-weight: bold;
+      margin-bottom: 31px;
+    }
+
+    p {
+      font-family: 'Century Gothic';
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+.u-btn {
+  padding: clamp(10px, 1.7vw, 25px) clamp(15px, 3.4vw, 50px);
+  background-color: #F7C35F;
+  border-style: none;
+  border-radius: clamp(10px, 1.36vw, 20px);
+  color: #1A1A1A;
+  font-family: 'Livvic';
+  text-transform: uppercase;
+  font-size: 15px;
+
+}
+
+.intro {
+  display: flex;
+  gap: clamp(20px, 5.44vw, 80px);
+  margin-top: clamp(40px, 6.80vw, 100px);
+  align-items: start;
+
+  @media (max-width: 790px) {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  &__left {
+    max-width: clamp(270px, 38%, 564px);
+    width: 100%;
+    min-width: 270px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 116%;
+      aspect-ratio: 658/497;
+      background-color: #263C28;
+      position: absolute;
+      top: min(-7.80vw, -120px);
+      right: 146px;
+      z-index: -1;
+    }
+
+
+    @media (max-width: 790px) {
+      max-width: 100%;
+    }
+  }
+
+  &__left-img {
+    width: 100%;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 20px;
+      height: 258px;
+      display: inline-block;
+      background-color: #F7C35F;
+      position: absolute;
+      left: -20px;
+      bottom: 21px;
+      border-radius: 5px 0 0 5px;
+    }
+
+    img {
+      border-radius: 10px;
+      width: 100%;
+    }
+  }
+
+  &__left-content {
+    padding: clamp(10px, 2.17vw, 32px) clamp(15px, 2.38vw, 35px);
+    background-color: #6D8C54;
+    border-radius: 10px;
+    display: flex;
+    max-width: 428px;
+    width: 100%;
+    gap: 20px;
+    position: relative;
+    margin-top: -82px;
+    z-index: 10;
+  }
+
+  &__left-content-text {
+    padding-left: clamp(10px, 2.17vw, 32px);
+    border-left: 1px solid #ffffff80;
+
+    .price {
+      font-family: Mistral;
+      font-size: 40px;
+
+      &+p {
+        font-family: 'Livvic';
+
+      }
+    }
+  }
+
+  &__right {
+    max-width: clamp(590px, 60.13vw, 884px);
+    width: 100%;
+    min-width: 590px;
+
+    @media (max-width: 1034px) {
+      min-width: 270px;
+    }
+
+    @media (max-width: 790px) {
+      max-width: 100%;
+    }
+
+    & h2 {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    & h3 {
+      font-size: 50px;
+      font-family: 'Livvic';
+      font-weight: bold;
+
+      @media (max-width: 1034px) {
+        font-size: clamp(32px, 4.8vw, 50px);
+      }
+    }
+
+    & h4 {
+      color: #F7C35F;
+      font-size: 30px;
+      font-family: 'Livvic';
+      margin: 50px 0 20px;
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 27px;
+      margin-bottom: 55px;
+    }
+
+    & li {
+      font-family: 'Livvic';
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-image: url('../images/icons/li-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}
+
+.video {
+  background-image: url('../images/img/video-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    padding: clamp(40px, 19.18vw, 282px) 0;
+    gap: clamp(20px, 27.82vw, 409px);
+
+    @media (max-width: 1232px) {
+      gap: 20px;
+      justify-content: space-between;
+    }
+
+    & h2 {
+      font-family: 'Livvic';
+      font-size: 50px;
+      font-weight: bold;
+      max-width: 609px;
+
+      @media (max-width: 1000px) {
+        font-size: clamp(35px, 5vw, 50px);
+      }
+    }
+
+    & a {
+      max-width: 130px;
+      width: 100%;
+      height: 130px;
+      display: inline-block;
+      border: 2px solid rgba(250, 250, 250, 0.4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin-right: 125px;
+
+      & img {
+        position: relative;
+        z-index: 1;
+      }
+
+      &::after {
+        content: '';
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+
+      &::before {
+        content: 'Watch the video';
+        color: #F7C35F;
+        font-family: Johnstown;
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        left: 86px;
+        width: 170px;
+        font-size: 30px;
+      }
+
+    }
+
+    a:hover {
+      &::after {
+        animation-name: circle;
+      }
+    }
+  }
+}
+
+@keyframes circle {
+  0% {
+    width: 80px;
+    height: 80px;
+  }
+
+  50% {
+    width: 100%;
+    height: 100%;
+  }
+
+  100% {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.block {
+  height: 200px;
+}
+
+.agriculture {
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    z-index: 1;
+    &::before{
+      content: '';
+      width: 9.06vw;
+      aspect-ratio: 1/1;
+      border-radius: 0 0 0 10px;
+      background-color: #678551;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+    }
+    &::after{
+      content: '';
+      width: 4.16vw;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+      background-color: #dddddd15;
+      display: inline-block;
+      position: absolute;
+      top: 6.6vw;
+      right: 6.6vw;
+      z-index: 10;
+    }
+  }
+
+  &__img {
+    width: 43.8vw;
+    height: 100%;
+    background-image: url('../images/img/agriculture-img-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    background-color: #6D8C54;
+    flex-grow: 1;
+    position: relative;
+    img{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 48.6%;
+    }
+  }
+  &__wrap{
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__container {
+    position: relative;
+    z-index: 100;
+    max-width: clamp(270px, 49.65vw, 730px);
+    padding: 80px 0;
+    h2{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    h3{
+      font-family: 'Livvic';
+      font-size: 50px;
+      font-weight: bold;
+      margin-bottom: 67px;
+    }
+    li{
+      display: flex;
+      gap: 30px;
+      img{
+        width: 90px;
+        height: 90px;
+        padding: 20px;
+        background-color: #344C31;
+        border-radius: 50%;
+      }
+      &:not(:last-child){
+        padding-bottom: 60px;
+        border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+      }
+      &:not(:first-child){
+        padding-top: 60px;
+      }
+    }
+  }
+  &__item{
+    h4{
+      font-family: 'Livvic';
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 7px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+}
