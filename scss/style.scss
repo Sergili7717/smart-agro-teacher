@@ -418,43 +418,51 @@ header {
 }
 
 .reviews {
-  margin: 100px 0 ;
-  h2{
+  margin: 100px 0;
+
+  h2 {
     font-size: 20px;
     text-align: center;
     margin-bottom: 20px;
   }
-  h3{
+
+  h3 {
     font-family: 'Livvic';
     font-size: 50px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 100px;
   }
-  &__container{
+
+  &__container {
     overflow: hidden;
   }
-  &__wrap{
+
+  &__wrap {
     display: flex;
     width: 600%;
     animation: moveLeft 15s infinite linear;
   }
-  &__items{
+
+  &__items {
     display: flex;
     width: 50%;
   }
-  &__item{
+
+  &__item {
     display: flex;
     min-width: 16.66%;
     gap: 85px;
     padding: 0 120px;
   }
-  &__item-left{
+
+  &__item-left {
     max-width: 350px;
     min-width: 350px;
     max-height: 350px;
     min-height: 350px;
-    & img{
+
+    & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -462,32 +470,38 @@ header {
       border-radius: 50%;
     }
   }
-  &__item-right{
+
+  &__item-right {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    & p{
+
+    & p {
       font-size: 18px;
     }
-    & p + p{
+
+    & p+p {
       display: flex;
       flex-direction: column;
       margin-top: 40px;
-      b{
+
+      b {
         font-size: 20px;
       }
-      span{
+
+      span {
         font-size: 16px;
       }
     }
   }
 }
 
-@keyframes moveLeft{
-  0%{
+@keyframes moveLeft {
+  0% {
     transform: translateX(0%);
   }
-  100%{
+
+  100% {
     transform: translateX(-50%);
   }
 }
@@ -503,7 +517,8 @@ header {
     height: 100%;
     display: flex;
     z-index: 1;
-    &::before{
+
+    &::before {
       content: '';
       width: 9.06vw;
       aspect-ratio: 1/1;
@@ -515,7 +530,8 @@ header {
       right: 0;
       z-index: 10;
     }
-    &::after{
+
+    &::after {
       content: '';
       width: 4.16vw;
       aspect-ratio: 1/1;
@@ -542,60 +558,106 @@ header {
     background-color: #6D8C54;
     flex-grow: 1;
     position: relative;
-    img{
+
+    img {
       position: absolute;
       right: 0;
       bottom: 0;
       max-height: 48.6%;
     }
   }
-  &__wrap{
+
+  &__wrap {
     display: flex;
     justify-content: flex-end;
   }
+
   &__container {
     position: relative;
     z-index: 100;
     max-width: clamp(270px, 49.65vw, 730px);
     padding: 80px 0;
-    h2{
+
+    h2 {
       font-size: 20px;
       margin-bottom: 20px;
     }
-    h3{
+
+    h3 {
       font-family: 'Livvic';
       font-size: 50px;
       font-weight: bold;
       margin-bottom: 67px;
     }
-    li{
+
+    li {
       display: flex;
       gap: 30px;
-      img{
+
+      img {
         width: 90px;
         height: 90px;
         padding: 20px;
         background-color: #344C31;
         border-radius: 50%;
       }
-      &:not(:last-child){
+
+      &:not(:last-child) {
         padding-bottom: 60px;
         border-bottom: 1px solid rgba(250, 250, 250, 0.2);
       }
-      &:not(:first-child){
+
+      &:not(:first-child) {
         padding-top: 60px;
       }
     }
   }
-  &__item{
-    h4{
+
+  &__item {
+    h4 {
       font-family: 'Livvic';
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 7px;
     }
-    p{
+
+    p {
       font-size: 18px;
+    }
+  }
+}
+
+.contact {
+  &__container {
+    display: flex;
+  }
+
+  &__block {
+    width: 643px;
+    &>p {
+      &~div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-grow: 1;
+    & input{
+      background-color: #263C28;
+      border-radius: 14px;
+      padding: 22px 25px;
+      font-size: 16px;
+    }
+    & textarea{
+      background-color: #263C28;
+      border-radius: 14px;
+      padding: 22px 25px;
+      font-size: 16px;
+      height: 184px;
     }
   }
 }

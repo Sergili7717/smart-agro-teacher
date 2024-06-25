@@ -574,3 +574,33 @@ header nav {
 .agriculture__item p {
   font-size: 18px;
 }
+
+.contact__container {
+  display: flex;
+}
+.contact__block {
+  width: 643px;
+}
+.contact__block > p ~ div {
+  display: flex;
+  flex-direction: column;
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex-grow: 1;
+}
+.contact__form input {
+  background-color: #263C28;
+  border-radius: 14px;
+  padding: 22px 25px;
+  font-size: 16px;
+}
+.contact__form textarea {
+  background-color: #263C28;
+  border-radius: 14px;
+  padding: 22px 25px;
+  font-size: 16px;
+  height: 184px;
+}
